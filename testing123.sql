@@ -6,7 +6,7 @@ CREATE DATABASE IF NOT EXISTS codeup_test_db;
 SHOW DATABASES;
 USE codeup_test_db;
 
-CREATE USER 'codeup_test_user'@'localhost' IF NOT EXISTS IDENTIFIED BY 'testpw';
+CREATE USER 'codeup_test_user'@'localhost' IDENTIFIED BY 'testpw';
 GRANT ALL ON codeup_test_db.* TO 'codeup_test_user'@'localhost';
 
 
@@ -20,3 +20,4 @@ CREATE TABLE IF NOT EXISTS testing123 (
     );
 
 SELECT * FROM quotes;
+

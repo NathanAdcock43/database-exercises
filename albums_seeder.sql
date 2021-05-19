@@ -2,8 +2,8 @@ USEcodeup_test_db;
 
 INSERTINTOalbums(artist,title,release_date,genre,sales)
 VALUE('PinkFloyd','TheWall',1979,'ProgressiveRock', 19),
-VALUE('Tom Petty and the Heart Breakers','Tom Petty and the Heart Breakers',1976,'Rock',19),
-VALUE('Queen','A Night at The Opera',1975,'ProgressiveRock',19),
+('Tom Petty and the Heart Breakers','Tom Petty and the Heart Breakers',1976,'Rock',19),
+('Queen','A Night at The Opera',1975,'ProgressiveRock',19),
 ('MichaelJackson','Thriller',1982,'Pop, post-disco, funk, rock',66),
 ('AC/DC','BackinBlack',1980,'Hardrock',50),
 ('MeatLoaf','BatOutofHell',1977,'Hardrock, glamrock, progressiverock',50),

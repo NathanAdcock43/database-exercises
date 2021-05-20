@@ -8,17 +8,19 @@ USE employees;
 
 SELECT first_name, last_name
 FROM employees
-ORDER BY last_name
-IN ('Irena', 'Vidya', 'Maya');
+Where last_name
+IN ('Irena', 'Vidya', 'Maya')
+ORDER BY last_name;
 
 -- 2) Update the query to order by first name and then last name.
 # The first result should now be Irena Acton and the last should be Vidya Boguraev.
 
 SELECT first_name, last_name
 FROM employees
-ORDER BY last_name
-AND first_name
-IN ('Irena', 'Vidya', 'Maya');
+Where last_name
+IN ('Irena', 'Vidya', 'Maya')
+ORDER BY last_name;
+AND first_name;
 
 -- 3)Change the ORDER BY clause so that you order by last name before first name.
 # Your first result should still be Irena Acton but now the last result should be Vidya Quittner.

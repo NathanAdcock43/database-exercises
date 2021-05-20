@@ -8,27 +8,29 @@ USE employees;
 
 SELECT first_name, last_name
 FROM employees
-Where last_name
+Where first_name
 IN ('Irena', 'Vidya', 'Maya')
-ORDER BY last_name;
+ORDER BY first_name;
 
 -- 2) Update the query to order by first name and then last name.
 # The first result should now be Irena Acton and the last should be Vidya Boguraev.
 
 SELECT first_name, last_name
 FROM employees
-Where last_name
+Where first_name
 IN ('Irena', 'Vidya', 'Maya')
-ORDER BY last_name;
-AND first_name;
+ORDER BY first_name
+AND last_name;
 
 -- 3)Change the ORDER BY clause so that you order by last name before first name.
 # Your first result should still be Irena Acton but now the last result should be Vidya Quittner.
 
 SELECT first_name, last_name
 FROM employees
-Where last_name
-          like '%q%';
+Where first_name
+IN ('Irena', 'Vidya', 'Maya')
+ORDER BY last_name
+AND first_name;
 
 -- 4) Update your queries for employees with 'E' in their last name to sort
 #  the results by their employee number. Your results should not change!
@@ -36,15 +38,22 @@ Where last_name
 SELECT first_name, last_name
 FROM employees
 Where last_name
-    like 'e%'
-   OR '%e';
+    like '%e%'
+ORDER BY emp_no;
 
 -- 5) Now reverse the sort order for both queries and compare results.
 
 SELECT first_name, last_name
 FROM employees
+Where first_name
+IN ('Irena', 'Vidya', 'Maya')
+ORDER BY last_name DESC;
+
+SELECT first_name, last_name
+FROM employees
 Where last_name
-    like 'e%'
-  AND '%e';
+like 'e%'
+ORDER BY emp_no DESC;
 
 
+# SELECT * FROM salaries ORDER BY salary DESC LIMIT 5 OFFSET 45;

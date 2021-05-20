@@ -33,14 +33,14 @@ like '%q%';
 SELECT first_name, last_name
 FROM employees
 Where first_name
-OR ('Irena', 'Vidya', 'Maya');
+OR 'Irena' OR 'Vidya' OR 'Maya';
 
 -- 5) Add a condition to the previous query to find everybody with those names who is also male — 441 rows.
 
 SELECT first_name, last_name
 FROM employees
 Where first_name
-OR ('Irena', 'Vidya', 'Maya')
+OR 'Irena' OR 'Vidya' OR 'Maya'
 AND gender = 'M';
 
 -- 6) Find all employees whose last name starts or ends with 'E' — 30,723 rows.
@@ -63,6 +63,6 @@ AND '%e';
 
 SELECT first_name, last_name
 FROM employees
-Where last_name
-like '%q%'
-AND NOT '%qu%';
+WHERE last_name
+LIKE '%q%'
+AND last_name NOT LIKE '%qu%';

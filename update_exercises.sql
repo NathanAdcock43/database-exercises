@@ -5,8 +5,21 @@ USEcodeup_test_db;
 --     All albums released before 1980
 --     All albums by Michael Jackson
 --     After each SELECT add an UPDATE statement to:
---
+
+SELECT title, FROM albums AS ;
+
+SELECT title, FROM albums WHERE release_date < 1980 AS ;
+
+SELECT title, FROM albums WHERE artist = Michael Jackson AS ;
+
+
 --     Make all the albums 10 times more popular (sales * 10)
 --     Move all the albums before 1980 back to the 1800s.
 --     Change 'Michael Jackson' to 'Peter Jackson'
 --     Add SELECT statements after each UPDATE so you can see the results of your handiwork.
+
+SELECT sales, FROM albums UPDATE sales * 10;
+
+SELECT release_date, FROM albums WHERE release_date < 1980 UPDATE sales * 10;
+
+SELECT title, FROM albums UPDATE sales * 10;

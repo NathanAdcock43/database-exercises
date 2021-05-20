@@ -1,6 +1,6 @@
-USEcodeup_test_db;
+USE codeup_test_db;
 
-INSERTINTOalbums(artist,title,release_date,genre,sales)
+INSERT INTO albums (artist, title, release_date, genre, sales)
 VALUE('PinkFloyd','TheWall',1979,'ProgressiveRock', 19),
 ('Tom Petty and the Heart Breakers','Tom Petty and the Heart Breakers',1976,'Rock',19),
 ('Queen','A Night at The Opera',1975,'ProgressiveRock',19),

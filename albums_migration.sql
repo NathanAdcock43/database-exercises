@@ -21,5 +21,5 @@ SELECT * FROM albums;
 
 INSERT INTO albums (artist, title, release_date, sales, genre)
 VALUE ('Pink Floyd', 'The Wall', 1979, 19000000000, 'Progressive Rock'),
-VALUE ('Tom Petty and the Heart Breakers', 'Tom Petty and the Heart Breakers', 1976, 19000000000, ' Rock'),
-VALUE ('Queen', 'A Night at The Opera', 1975, 19000000000, 'Progressive Rock');
+('Tom Petty and the Heart Breakers', 'Tom Petty and the Heart Breakers', 1976, 19000000000, ' Rock'),
+('Queen', 'A Night at The Opera', 1975, 19000000000, 'Progressive Rock');

@@ -5,7 +5,7 @@ USE employees;
 -- 1) Update your queries for employees whose names start and end with 'E'.
 -- Use concat() to combine their first and last name together as a single column in your results.
 
-SELECT CONCAT(first_name, last_name)
+SELECT CONCAT(first_name, ' ' ,last_name)
 FROM employees
 Where last_name
 like 'e%'

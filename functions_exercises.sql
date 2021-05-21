@@ -22,28 +22,27 @@ WHERE MONTH(birth_date) = 12 AND DAYOFMONTH(birth_date) = 25;
 
 SELECT first_name, last_name
 FROM employees
-WHERE hire_date BETWEEN 1990 AND 2000
+WHERE hire_date BETWEEN '1990-01-01' AND '2000-12-31'
 AND MONTH(birth_date) = 12
 AND DAYOFMONTH(birth_date) = 25;
 
 -- 4) Change the query for employees hired in the 90s and born on Christmas such that the first
 -- result is the oldest employee who was hired last. It should be Khun Bernini.
 
-SELECT first_name, last_name
+SELECT first_name, last_name, birth_date, hire_date
 FROM employees
-WHERE hire_date BETWEEN 1990 AND 2000
+WHERE hire_date BETWEEN '1990-01-01' AND '2000-12-31'
 AND MONTH(birth_date) = 12
 AND DAYOFMONTH(birth_date) = 25
-ORDER BY birth_date DESC ;
+ORDER BY birth_date, hire_date desc;
 
 -- 5)For your query of employees born on Christmas and hired in the 90s,
 # use datediff() to find how many days they have been working at the company
 # (Hint: You might also need to use now() or curdate()).
 
-SELECT first_name, last_name
+SELECT first_name, last_name, datediff(curdate(), hire_date) AS 'days employed'
 FROM employees
-WHERE hire_date BETWEEN 1990 AND 2000
-  AND MONTH(birth_date) = 12
-  AND DAYOFMONTH(birth_date) = 25
-ORDER BY birth_date DESC ;
+WHERE hire_date BETWEEN '1990-01-01' AND '2000-12-31'
+AND MONTH(birth_date) = 12
+AND DAYOFMONTH(birth_date) = 25;
 

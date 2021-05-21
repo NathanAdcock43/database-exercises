@@ -68,9 +68,9 @@ GROUP BY last_name;
 --     441 M
 --     268 F
 
-SELECT first_name, last_name
+SELECT COUNT(gender), gender
 FROM employees
 Where first_name
 IN ('Irena', 'Vidya', 'Maya')
-ORDER BY first_name;
+GROUP BY gender;
 

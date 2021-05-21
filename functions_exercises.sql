@@ -36,8 +36,9 @@ AND MONTH(birth_date) = 12
 AND DAYOFMONTH(birth_date) = 25
 ORDER BY birth_date DESC ;
 
--- 5)For your query of employees born on Christmas and hired in the 90s, use datediff() to find how many days they have
--- been working at the company (Hint: You might also need to use now() or curdate()).
+-- 5)For your query of employees born on Christmas and hired in the 90s,
+# use datediff() to find how many days they have been working at the company
+# (Hint: You might also need to use now() or curdate()).
 
 SELECT first_name, last_name
 FROM employees

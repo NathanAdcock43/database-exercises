@@ -32,3 +32,5 @@ DESCRIBE titles;
 # PRI- title
 # PRI- from_date
 
+-- this is relational db building all of these PRI show how this ..
+
